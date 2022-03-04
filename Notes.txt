@@ -1,0 +1,56 @@
+git add about.txt		//adds file named about.txt
+git add .    		//adds all files in folder
+STAGED STATE.
+You will not get a response after this command, but to know what state your file is in, you can run the git status command.
+
+Response example: 
+*************************************************
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   todo.txt
+*************************************************
+
+COMMIT
+
+git commit -m "initial commit"
+git commit	//files staged are ready to be committed
+-m		//shorthand for message
+"initial commit"   //commit message
+
+Response example: 
+*****************************************************
+[master (root-commit) 0108401] initial commit
+ 1 file changed, 8 insertions(+)
+ create mode 100644 todo.txt
+*****************************************************
+file is in committed state
+
+PUSH
+
+1. Create repo or 2. Push existing one
+2.
+git remote add origin https://github.com/szaffy/Git-test
+git branch -M main
+git push -u origin main
+
+git remote add origin https://github.com/szaffy/Git-test 	//create connection between local and remote r
+//You won't usually get a response after executing this command but make sure you have an internet connection
+git branch -M main  		//changes main branches name to "main" (master)
+git push -u origin main		//push local to github
+
+Response example:
+*****************************************************
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/szaffy/Git-test
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+*******************************************************************
